@@ -1,16 +1,15 @@
 import unittest, xmlrunner, json, requests
 
-data = json.load(open('tests.json', 'r'))
-
 class Tests(unittest.TestCase): pass
 
-def add_test(cls, name):
+def add_test(cls, name, data):
     def abstract_test(self):
-        self.assertEqual(requests.request(**data[name]['request']).status_code, data[name]['assert']['statusCode'])
+        self.assertEqual(requests.request(**data['request']).status_code, data['assert']['statusCode'])
     setattr(cls, name, abstract_test)
 
-for test_name in data.keys():
-    add_test(Tests, test_name)
+with open('tests.json', 'r') as json_file:
+    for test_name, test_data in json.load(json_file).items():
+        add_test(Tests, test_name, test_data)
 
 if __name__ == '__main__':
     unittest.main(testRunner=xmlrunner.XMLTestRunner())

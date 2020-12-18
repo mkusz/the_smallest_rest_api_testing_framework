@@ -1,0 +1,42 @@
+{
+  "test_get_all_users": {
+    "request": {
+      "method": "GET",
+      "url": "https://reqres.in/api/users"
+    },
+    "assert": {
+      "statusCode": 200
+    }
+  },
+  "test_get_users_id_2": {
+    "request": {
+      "method": "GET",
+      "url": "https://reqres.in/api/users/2"
+    },
+    "assert": {
+      "statusCode": 200
+    }
+  },
+  "test_get_non_existing_user": {
+    "request": {
+      "method": "GET",
+      "url": "https://reqres.in/api/users/23"
+    },
+    "assert": {
+      "statusCode": 404
+    }
+  },
+  "test_create_new_user": {
+    "request": {
+      "method": "POST",
+      "url": "https://reqres.in/api/users",
+      "json": {
+        "name": "testerembyc",
+        "jon": "tester"
+      }
+    },
+    "assert": {
+      "statusCode": 201
+    }
+  }
+}

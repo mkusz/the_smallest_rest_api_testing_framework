@@ -5,7 +5,9 @@
       "url": "https://reqres.in/api/users"
     },
     "assert": {
-      "statusCode": 200
+      "statusCode": 200,
+      "responseKeys": ["page", "total", "per_page", "total_pages", "data", "support"],
+      "responseTime": 0.300
     }
   },
   "test_get_users_id_2": {
@@ -14,7 +16,9 @@
       "url": "https://reqres.in/api/users/2"
     },
     "assert": {
-      "statusCode": 200
+      "statusCode": 200,
+      "responseKeys": ["data", "support"],
+      "responseTime": 0.300
     }
   },
   "test_get_non_existing_user": {
@@ -23,20 +27,9 @@
       "url": "https://reqres.in/api/users/23"
     },
     "assert": {
-      "statusCode": 404
-    }
-  },
-  "test_create_new_user": {
-    "request": {
-      "method": "POST",
-      "url": "https://reqres.in/api/users",
-      "json": {
-        "name": "testerembyc",
-        "jon": "tester"
-      }
-    },
-    "assert": {
-      "statusCode": 201
+      "statusCode": 404,
+      "responseKeys": [],
+      "responseTime": 0.300
     }
   }
 }

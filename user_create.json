@@ -1,0 +1,17 @@
+{
+  "test_create_new_user": {
+    "request": {
+      "method": "POST",
+      "url": "https://reqres.in/api/users",
+      "json": {
+        "name": "testerembyc",
+        "jon": "tester"
+      }
+    },
+    "assert": {
+      "statusCode": 201,
+      "responseKeys": ["name", "jon", "id", "createdAt"],
+      "responseTime": 0.300
+    }
+  }
+}

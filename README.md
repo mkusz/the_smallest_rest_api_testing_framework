@@ -16,4 +16,4 @@ Branches with most interesting versions of the framework:
   functionality as in **first article**, but in a limited lines of a code
 * [more functionality](https://github.com/mkusz/the_smallest_rest_api_testing_framework/tree/more_functionality) - 
   code with extended testing abilities but still in 16 lines of code
-* [PEP-8 valid](https://github.com/mkusz/the_smallest_rest_api_testing_framework/tree/pep8_valid) - version that is valid with PEP-8 style coding guide, functionality is somewhere in between versions with **6 lines** of code and **more functionality** but still in 16 lines of c
+* [PEP-8 valid](https://github.com/mkusz/the_smallest_rest_api_testing_framework/tree/pep8_valid) - version that is valid with PEP-8 style coding guide, functionality is somewhere in between versions with **6 lines** of code and **more functionality** but still in 16 lines of code
